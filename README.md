@@ -20,4 +20,4 @@ To enhance data exploration, users can filter the data based on:
 ## Instructions
 1) Open R
 2) Load Shiny library
-3) Run this code: runGitHub("Virginia_Misdemeanor_Caseflow", "brandmorrissey")
+3) Run this code: runGitHub("Virginia_Misdemeanor_Caseflow", "brandmorrissey", launch.browser=TRUE)
