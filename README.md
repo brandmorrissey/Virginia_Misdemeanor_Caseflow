@@ -1,6 +1,6 @@
 # Misdemeanor Caseflow Viz Tool
 
-This Shiny application provides an interactive tool for visualizing data concerning misdemeanor charges heard in Virginia District Courts. The data used comes from court records made publicly available at VirginiaCourtData.org.
+This Shiny application provides an interactive tool for visualizing data concerning misdemeanor charges heard in Virginia District Courts. The data used comes from court records made publicly available at VirginiaCourtData.org. Data has been limited to include only offenses listed in Section 18.2 of the Code of Virginia and offenses under local ordinances. 
 
 ## Uses
 The application offers two primary functionalities:
