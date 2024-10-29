@@ -5,13 +5,13 @@ ui <- fluidPage(
              sidebarLayout(
                sidebarPanel(
                  selectInput("offenseCategory", "Select Offense Category:", 
-                             choices = c("All", sort(unique(merged_dt$OffenseCategory))),
+                             choices = c("All", sort(unique(VirginiaMisdemeanors_Trimmed$OffenseCategory))),
                              selected = "All"),
                  selectInput("crimeFamily", "Select Revised Crime Family:", 
-                             choices = c("All", sort(unique(merged_dt$RevisedCrimeFamily))),
+                             choices = c("All", sort(unique(VirginiaMisdemeanors_Trimmed$RevisedCrimeFamily))),
                              selected = "All"),
                  selectInput("Jurisdiction", "Select Jurisdiction:",
-                             choices = c("All", sort(unique(merged_dt$Jurisdiction))),
+                             choices = c("All", sort(unique(VirginiaMisdemeanors_Trimmed$Jurisdiction))),
                              selected = "All")
                ),
                mainPanel(
@@ -24,11 +24,11 @@ ui <- fluidPage(
              sidebarLayout(
                sidebarPanel(
                  selectInput("offenseCategory_time", "Select Offense Category:", 
-                             choices = c("All", sort(unique(merged_dt$OffenseCategory)))),
+                             choices = c("All", sort(unique(VirginiaMisdemeanors_Trimmed$OffenseCategory)))),
                  selectInput("crimeFamily_time", "Select Revised Crime Family:", 
-                             choices = c("All", sort(unique(merged_dt$RevisedCrimeFamily)))),
+                             choices = c("All", sort(unique(VirginiaMisdemeanors_Trimmed$RevisedCrimeFamily)))),
                  selectInput("Jurisdiction_time", "Select Jurisdiction:",
-                             choices = c("All", sort(unique(merged_dt$Jurisdiction))))
+                             choices = c("All", sort(unique(VirginiaMisdemeanors_Trimmed$Jurisdiction))))
                ),
                mainPanel(
                  plotOutput("timePlot")
@@ -42,7 +42,7 @@ ui <- fluidPage(
 server <- function(input, output) {
   
   filtered_data <- reactive({
-    data <- merged_dt
+    data <- VirginiaMisdemeanors_Trimmed
     
     if (input$offenseCategory != "All") {
       data <- data %>%
@@ -63,7 +63,7 @@ server <- function(input, output) {
   })
   
   filtered_data_time <- reactive({
-    data <- merged_dt
+    data <- VirginiaMisdemeanors_Trimmed
     
     if (input$offenseCategory_time != "All") {
       data <- data %>%
