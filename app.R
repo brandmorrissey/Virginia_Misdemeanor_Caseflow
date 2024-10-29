@@ -6,7 +6,7 @@ library(DT)
 
 VirginiaMisdemeanors_Trimmed <- read.csv("https://media.githubusercontent.com/media/brandmorrissey/Virginia_Misdemeanor_Caseflow/refs/heads/Sankey-Plot/VirginiaMisdemeanors_Trimmed.csv")
 
-
+VirginiaMisdemeanors_Trimmed$OffenseMonth=as.Date(VirginiaMisdemeanors_Trimmed$OffenseMonth)
 
 ui <- fluidPage(
   titlePanel("Misdmemeanors in Virginia District Courts"),
@@ -156,7 +156,7 @@ server <- function(input, output) {
     ggplot(counts, aes(x = OffenseMonth, y = count)) +
       geom_line() +
       geom_point() +
-      labs(title = "Charges Over Time", x = "Charge Month", y = "Count") +
+      labs(title = "Charges Over Time", x = "Charge Year", y = "Count") +
       theme_minimal()
   })
 }
