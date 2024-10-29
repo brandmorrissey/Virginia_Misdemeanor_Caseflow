@@ -1,3 +1,12 @@
+#library
+library(tidyverse)
+library(networkD3)
+library(shiny)
+library(DT)
+
+
+
+
 ui <- fluidPage(
   titlePanel("Misdmemeanors in Virginia District Courts"),
   tabsetPanel(
