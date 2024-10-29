@@ -1,10 +1,16 @@
 #library
-install.packages(c("tidyverse", "networkD3", "shiny", "DT"))
+required_packages <- c("tidyverse", "networkD3", "shiny", "DT")
 
-library(tidyverse)
-library(networkD3)
-library(shiny)
-library(DT)
+# Function to check and install missing packages
+install_if_missing <- function(package) {
+  if (!require(package, character.only = TRUE)) {
+    install.packages(package)
+    library(package, character.only = TRUE)
+  }
+}
+
+# Install and load required packages
+invisible(sapply(required_packages, install_if_missing))
 
 VirginiaMisdemeanors_Trimmed <- read.csv("https://media.githubusercontent.com/media/brandmorrissey/Virginia_Misdemeanor_Caseflow/refs/heads/Sankey-Plot/VirginiaMisdemeanors_Trimmed.csv")
 
