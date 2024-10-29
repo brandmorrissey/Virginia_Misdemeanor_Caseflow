@@ -1,4 +1,6 @@
 #library
+install.packages(c("tidyverse", "networkD3", "shiny", "DT"))
+
 library(tidyverse)
 library(networkD3)
 library(shiny)
