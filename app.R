@@ -4,6 +4,7 @@ library(networkD3)
 library(shiny)
 library(DT)
 
+VirginiaMisdemeanors_Trimmed <- read.csv("VirginiaMisdemeanors_Trimmed.csv")
 
 
 
