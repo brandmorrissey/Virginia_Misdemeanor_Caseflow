@@ -17,7 +17,7 @@ VirginiaMisdemeanors_Trimmed <- read.csv("https://media.githubusercontent.com/me
 VirginiaMisdemeanors_Trimmed$OffenseMonth=as.Date(VirginiaMisdemeanors_Trimmed$OffenseMonth)
 
 ui <- fluidPage(
-  titlePanel("Misdmemeanors in Virginia District Courts"),
+  titlePanel("Misdememeanors in Virginia District Courts"),
   tabsetPanel(
     tabPanel("Charge Outcomes",
              sidebarLayout(
